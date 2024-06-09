@@ -1,0 +1,171 @@
+/* Genel sayfa stili, yazı tipi ve satır aralığı ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #EEEEEE; /* Çok açık gri arka plan */
+    text-align: center;
+}
+
+/* Başlık (header) stili, arka plan rengi ve metin rengi */
+header {
+    background: #222831; /* Çok koyu mavi gri */
+    color: #EEEEEE; /* Çok açık gri */
+    padding: 5px 0;
+    text-align: center;
+}
+
+header img{
+    max-width: calc(8%); 
+   
+}
+
+header h2{
+    padding: 0;
+    margin: 0;
+}
+
+/* Gezinti çubuğunun listesini biçimlendirir, varsayılan liste stili kaldırılır */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Gezinti çubuğundaki liste elemanlarını yatay olarak sıralar */
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Gezinti bağlantı stili, bağlantı rengi ve alt çizgi kaldırılır */
+.nav-link {
+    color: #EEEEEE; /* Çok açık gri */
+    text-decoration: none;
+    transition: color 0.8s ease, font-weight 0.8s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD369;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #FFD369; /* Aktif linkin rengi */
+}
+
+/* Ana içerik alanı stili, iç boşluk ayarı */
+main {
+    padding: 20px;
+}
+
+/* İçerik bölümlerini ayırır ve aralarına boşluk bırakır */
+section {
+    margin-bottom: 20px;
+}
+
+/* Home bölümünün stili, arka plan rengi ve kenar yumuşatma */
+section#home {
+    background: #393E46; /* Koyu gri */
+    padding: 20px;
+    border-radius: 5px;
+    color: #EEEEEE; /* Çok açık gri */
+}
+
+section#home a{
+    text-decoration: none;
+    color: #FFD369;
+}
+
+/* Services bölümünün stili */
+section#services {
+    background: #FFD369; /* Altın sarısı */
+    padding: 20px;
+    border-radius: 5px;
+    color: #222831; /* Çok koyu mavi gri metin */
+}
+
+/* Programs bölümünün stili */
+section#programs {
+    background: #393E46; /* Koyu gri */
+    padding: 20px;
+    border-radius: 5px;
+    color: #EEEEEE; /* Çok açık gri */
+}
+
+/* Flexbox konteyner stili */
+.programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Öğeler arasındaki boşluk */
+}
+
+/* Flexbox öğe stili */
+.programs-items {
+    background: #222831; /* Çok koyu mavi gri */
+    color: #EEEEEE; /* Çok açık gri */
+    padding: 20px;
+    flex: calc(33% - 1rem); /* Eşit genişlikte olmasını sağlar, arada boşluk bırakır */
+    box-sizing: border-box; /* Kenar boşluklarını hesaba katar */
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.programs-items:hover{
+     transform: scale(1.05);
+}
+
+.programs-items a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    background: #393E46; 
+    color: #FFD369;
+    transition: color 1s ease, background-color 1s ease;
+}
+
+.programs-items a:hover{
+    color:  #222831;
+    background-color: #FFD369 ;
+
+}
+
+/* Ekran genişliği 768px'in altında olduğunda */
+@media (max-width: 768px) {
+    .programs-items {
+        flex: calc(50% - 1rem); /* İki öğe yan yana */
+    }
+
+    nav ul li a{
+        font-size: calc(100%);
+    }
+
+    header img{
+        max-width: calc(22%);
+        max-height: calc(22%);
+}
+
+}
+
+/* Ekran genişliği 480px'in altında olduğunda */
+@media (max-width: 480px) {
+    .programs-items {
+        flex: 100%; /* Tek öğe yan yana */
+    }
+    nav ul li a{
+        font-size: calc(88%);
+    }
+}
+
+/* Alt bilgi (footer) stili, arka plan rengi, metin rengi ve hizalama */
+footer {
+    background: #222831; /* Çok koyu mavi gri */
+    color: #EEEEEE; /* Çok açık gri */
+    text-align: center;
+    padding: 10px 0;
+    
+    width: 100%;
+    bottom: 0;
+}

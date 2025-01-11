@@ -1,0 +1,418 @@
+:root {
+    --primary: #0a192f;
+    --secondary: #172a45;
+    --accent: #64ffda;
+    --text: #ffffff;
+    --text-secondary: #8892b0;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, sans-serif;
+    background: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--secondary);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding-top: 4rem;
+}
+
+.section {
+    display: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: #0a192f;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Features */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Termal Bakım Bölümü */
+.thermal-info {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.thermal-info h2 {
+    color: var(--accent);
+    margin-top: 1.5rem;
+}
+
+.thermal-info ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.thermal-info li {
+    margin: 0.5rem 0;
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.thermal-info a{
+    text-decoration: none;
+    color: var(--accent);
+}
+
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-category {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--text-secondary);
+}
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--text-secondary);
+}
+
+.service-price {
+    color: var(--accent);
+    font-weight: bold;
+}
+.service-note {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: 3rem;
+    padding: 1rem;
+    background: var(--secondary);
+    border-radius: 0.5rem;
+}
+
+.service-note p {
+    margin: 0.5rem 0;
+}
+
+/* Completed Jobs */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.job-card {
+    background: var(--secondary);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-content {
+    padding: 1.5rem;
+}
+
+/* Contact */
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 3rem;
+}
+
+.contact-content {
+    display: grid;
+    gap: 3rem;
+}
+
+.contact-info h2, .contact-hours h2 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    gap: 2rem;
+}
+
+.contact-method {
+    background: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+}
+
+.contact-method h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.contact-method p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.email {
+    background: #EA4335;
+    color: white;
+}
+
+.phone {
+    background: #0088CC;
+    color: white;
+}
+
+.instagram {
+    background: #E4405F;
+    color: white;
+}
+
+.contact-hours {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.contact-hours ul {
+    list-style: none;
+}
+
+.contact-hours li {
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--text-secondary);
+}
+
+.contact-hours li:last-child {
+    border-bottom: none;
+}
+
+.contact-hours span {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+    background: var(--secondary);
+    padding: 3rem 1rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--text-secondary);
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--secondary);
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
